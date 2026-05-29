@@ -1,16 +1,20 @@
 # Online Grocery Shopping Experiment Interface
-This is a simple Tkinter-based interface for simulating online grocery shopping scenarios in user behavior experiments.
+
+This is a web-based interface for simulating online grocery shopping scenarios in user behavior experiments.
 
 ## Features
-- Display of grocery products with prices
-- Shopping cart management (add, remove, clear, checkout)
-- Real-time total price calculation
-- Automatic logging of user actions (saved to experiment_log.txt)
-- Simple and clean interface suitable for experimental recording
+- **5 Common Grocery Items**: Apple, Milk, Bread, Eggs, Mineral Water
+- **Interactive Cart**: Add/remove items, adjust quantities, clear cart
+- **Checkout Process**: Simulates real purchase flow
+- **Action Logging**: Records all user interactions for analysis
+- **Local Only**: Runs entirely in the browser, no public website access
 
 ## How to Run
-1. Make sure Python is installed on your computer.
-2. Clone or download this repository.
-3. Open a terminal in the project folder and run:
-   ```bash
-   python grocery_shopping.py
+1. Download all files to your computer
+2. Open `index.html` in any modern web browser
+3. Complete the shopping tasks as instructed
+
+## Notes
+- This interface is for experimental use only
+- The repository is set to private to ensure data confidentiality
+- No user data is collected or stored on external servers

@@ -1,114 +1,114 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreshMart 生鲜超市</title>
+    <title>FreshMart Grocery Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 顶部导航栏 -->
+    <!-- Header Navigation -->
     <header class="header">
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
                     <h1>FreshMart</h1>
-                    <p>你的日常生鲜伙伴</p>
+                    <p>Your daily grocery partner</p>
                 </div>
                 <nav class="nav">
-                    <a href="#products">全部商品</a>
-                    <a href="#cart" class="cart-link">购物车 (<span id="cart-count">0</span>)</a>
+                    <a href="#products">All Products</a>
+                    <a href="#cart" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
                 </nav>
             </div>
         </div>
     </header>
 
-    <!-- 主横幅 -->
+    <!-- Hero Banner -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2>新鲜直达，安心选购</h2>
-                <p>精选优质食材，给你和家人健康的每一天</p>
+                <h2>Fresh Delivered, Safe & Secure</h2>
+                <p>Curated quality ingredients for your healthy daily life</p>
             </div>
         </div>
     </section>
 
-    <!-- 商品列表区 -->
+    <!-- Product Section -->
     <section id="products" class="products-section">
         <div class="container">
-            <h2 class="section-title">热销商品</h2>
+            <h2 class="section-title">Featured Products</h2>
             <div class="products-grid">
-                <!-- 商品1：苹果 -->
+                <!-- Apple -->
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="苹果.png" alt="苹果">
+                        <img src="apple.png" alt="Apple">
                     </div>
                     <div class="product-info">
-                        <h3>红富士苹果</h3>
-                        <p class="product-desc">脆甜多汁，产地直供</p>
+                        <h3>Red Fuji Apple</h3>
+                        <p class="product-desc">Crisp and juicy, sourced directly from farms</p>
                         <div class="price-row">
-                            <span class="price">¥5.99</span>
-                            <button class="add-btn" onclick="addToCart(1)">加入购物车</button>
+                            <span class="price">$5.99</span>
+                            <button class="add-btn" onclick="addToCart(1)">Add to Cart</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 商品2：牛奶 -->
+                <!-- Milk -->
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="牛奶.png" alt="牛奶">
+                        <img src="milk.png" alt="Milk">
                     </div>
                     <div class="product-info">
-                        <h3>全脂纯牛奶</h3>
-                        <p class="product-desc">营养早餐，每日必备</p>
+                        <h3>Whole Milk</h3>
+                        <p class="product-desc">Essential nutrition for daily breakfast</p>
                         <div class="price-row">
-                            <span class="price">¥12.50</span>
-                            <button class="add-btn" onclick="addToCart(2)">加入购物车</button>
+                            <span class="price">$12.50</span>
+                            <button class="add-btn" onclick="addToCart(2)">Add to Cart</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 商品3：面包 -->
+                <!-- Bread -->
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="面包.png" alt="面包">
+                        <img src="bread.png" alt="Bread">
                     </div>
                     <div class="product-info">
-                        <h3>全麦吐司面包</h3>
-                        <p class="product-desc">健康粗粮，无额外添加</p>
+                        <h3>Whole Wheat Bread</h3>
+                        <p class="product-desc">Healthy whole grain, no added preservatives</p>
                         <div class="price-row">
-                            <span class="price">¥8.99</span>
-                            <button class="add-btn" onclick="addToCart(3)">加入购物车</button>
+                            <span class="price">$8.99</span>
+                            <button class="add-btn" onclick="addToCart(3)">Add to Cart</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 商品4：鸡蛋 -->
+                <!-- Eggs -->
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="鸡蛋.png" alt="鸡蛋">
+                        <img src="eggs.png" alt="Eggs">
                     </div>
                     <div class="product-info">
-                        <h3>农家土鸡蛋</h3>
-                        <p class="product-desc">散养鸡蛋，营养丰富</p>
+                        <h3>Farm Fresh Eggs</h3>
+                        <p class="product-desc">Free-range eggs, rich in nutrients</p>
                         <div class="price-row">
-                            <span class="price">¥15.00</span>
-                            <button class="add-btn" onclick="addToCart(4)">加入购物车</button>
+                            <span class="price">$15.00</span>
+                            <button class="add-btn" onclick="addToCart(4)">Add to Cart</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 商品5：矿泉水 -->
+                <!-- Water -->
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="矿泉水.png" alt="矿泉水">
+                        <img src="water.png" alt="Water">
                     </div>
                     <div class="product-info">
-                        <h3>天然矿泉水</h3>
-                        <p class="product-desc">弱碱性水，健康饮水</p>
+                        <h3>Natural Mineral Water</h3>
+                        <p class="product-desc">Weak alkaline water for healthy hydration</p>
                         <div class="price-row">
-                            <span class="price">¥2.50</span>
-                            <button class="add-btn" onclick="addToCart(5)">加入购物车</button>
+                            <span class="price">$2.50</span>
+                            <button class="add-btn" onclick="addToCart(5)">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -116,36 +116,36 @@
         </div>
     </section>
 
-    <!-- 购物车区 -->
+    <!-- Cart Section -->
     <section id="cart" class="cart-section">
         <div class="container">
-            <h2 class="section-title">我的购物车</h2>
+            <h2 class="section-title">Your Shopping Cart</h2>
             <div class="cart-container">
                 <div class="cart-items" id="cart-items">
-                    <p class="empty-cart">您的购物车还是空的，快去挑选商品吧~</p>
+                    <p class="empty-cart">Your cart is empty. Start shopping now!</p>
                 </div>
                 <div class="cart-summary">
                     <div class="summary-row">
-                        <span>商品总计：</span>
-                        <span id="subtotal">¥0.00</span>
+                        <span>Subtotal:</span>
+                        <span id="subtotal">$0.00</span>
                     </div>
                     <div class="summary-row total-row">
-                        <span>应付金额：</span>
-                        <span id="total" class="total-price">¥0.00</span>
+                        <span>Total Amount:</span>
+                        <span id="total" class="total-price">$0.00</span>
                     </div>
                     <div class="cart-buttons">
-                        <button class="btn-clear" onclick="clearCart()">清空购物车</button>
-                        <button class="btn-checkout" onclick="checkout()">立即结算</button>
+                        <button class="btn-clear" onclick="clearCart()">Clear Cart</button>
+                        <button class="btn-checkout" onclick="checkout()">Checkout</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 页脚 -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>© 2026 FreshMart 生鲜超市 | 仅供实验使用</p>
+            <p>© 2026 FreshMart Grocery Store | For Experimental Use Only</p>
         </div>
     </footer>
 

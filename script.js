@@ -1,10 +1,19 @@
-// Product data (consistent with the original design)
+// Product data (all items now included)
 const products = [
     { id: 1, name: "Red Fuji Apple", price: 5.99 },
     { id: 2, name: "Whole Milk", price: 12.50 },
     { id: 3, name: "Whole Wheat Bread", price: 8.99 },
     { id: 4, name: "Farm Fresh Eggs", price: 15.00 },
-    { id: 5, name: "Natural Mineral Water", price: 2.50 }
+    { id: 5, name: "Natural Mineral Water", price: 2.50 },
+    { id: 6, name: "Fresh Beef", price: 18.99 },
+    { id: 7, name: "Moisturizing Body Wash", price: 7.99 },
+    { id: 8, name: "Raw Chicken Legs", price: 9.99 },
+    { id: 9, name: "Dark Chocolate", price: 4.99 },
+    { id: 10, name: "Fresh Cucumber", price: 1.99 },
+    { id: 11, name: "Vanilla Ice Cream", price: 3.99 },
+    { id: 12, name: "Ballpoint Pen", price: 2.49 },
+    { id: 13, name: "Long Grain Rice", price: 6.99 },
+    { id: 14, name: "Nourishing Shampoo", price: 8.49 }
 ];
 
 let cart = [];

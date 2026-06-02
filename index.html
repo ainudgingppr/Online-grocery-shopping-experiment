@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshMart Grocery Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>FreshMart</h1>
+                    <p>Your daily grocery partner</p>
+                </div>
+                <nav class="nav">
+                    <a href="#products">All Products</a>
+                    <a href="#cart" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Fresh Delivered, Safe & Secure</h2>
+                <p>Curated quality ingredients for your healthy daily life</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="products-grid">
+                <!-- Original Items -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="apple.png" alt="Apple">
+                    </div>
+                    <div class="product-info">
+                        <h3>Red Fuji Apple</h3>
+                        <p class="product-desc">Crisp and juicy, sourced directly from farms</p>
+                        <div class="price-row">
+                            <span class="price">$5.99</span>
+                            <button class="add-btn" onclick="addToCart(1)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="milk.png" alt="Milk">
+                    </div>
+                    <div class="product-info">
+                        <h3>Whole Milk</h3>
+                        <p class="product-desc">Essential nutrition for daily breakfast</p>
+                        <div class="price-row">
+                            <span class="price">$12.50</span>
+                            <button class="add-btn" onclick="addToCart(2)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="bread.png" alt="Bread">
+                    </div>
+                    <div class="product-info">
+                        <h3>Whole Wheat Bread</h3>
+                        <p class="product-desc">Healthy whole grain, no added preservatives</p>
+                        <div class="price-row">
+                            <span class="price">$8.99</span>
+                            <button class="add-btn" onclick="addToCart(3)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="eggs.png" alt="Eggs">
+                    </div>
+                    <div class="product-info">
+                        <h3>Farm Fresh Eggs</h3>
+                        <p class="product-desc">Free-range eggs, rich in nutrients</p>
+                        <div class="price-row">
+                            <span class="price">$15.00</span>
+                            <button class="add-btn" onclick="addToCart(4)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="water.png" alt="Water">
+                    </div>
+                    <div class="product-info">
+                        <h3>Natural Mineral Water</h3>
+                        <p class="product-desc">Weak alkaline water for healthy hydration</p>
+                        <div class="price-row">
+                            <span class="price">$2.50</span>
+                            <button class="add-btn" onclick="addToCart(5)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Beef.png" alt="Beef">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Beef</h3>
+                        <p class="product-desc">Premium cut, tender and flavorful</p>
+                        <div class="price-row">
+                            <span class="price">$18.99</span>
+                            <button class="add-btn" onclick="addToCart(6)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="BodyWash.png" alt="Body Wash">
+                    </div>
+                    <div class="product-info">
+                        <h3>Moisturizing Body Wash</h3>
+                        <p class="product-desc">Gentle formula for daily care</p>
+                        <div class="price-row">
+                            <span class="price">$7.99</span>
+                            <button class="add-btn" onclick="addToCart(7)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="ChickenLeg.png" alt="Chicken Leg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Raw Chicken Legs</h3>
+                        <p class="product-desc">Fresh poultry, ideal for cooking</p>
+                        <div class="price-row">
+                            <span class="price">$9.99</span>
+                            <button class="add-btn" onclick="addToCart(8)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Chocolate.png" alt="Chocolate">
+                    </div>
+                    <div class="product-info">
+                        <h3>Dark Chocolate</h3>
+                        <p class="product-desc">Rich cocoa flavor, premium quality</p>
+                        <div class="price-row">
+                            <span class="price">$4.99</span>
+                            <button class="add-btn" onclick="addToCart(9)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Cucumber.png" alt="Cucumber">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Cucumber</h3>
+                        <p class="product-desc">Crisp and refreshing, farm fresh</p>
+                        <div class="price-row">
+                            <span class="price">$1.99</span>
+                            <button class="add-btn" onclick="addToCart(10)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="IceCream.png" alt="Ice Cream">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vanilla Ice Cream</h3>
+                        <p class="product-desc">Creamy and smooth, classic flavor</p>
+                        <div class="price-row">
+                            <span class="price">$3.99</span>
+                            <button class="add-btn" onclick="addToCart(11)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Pen.png" alt="Pen">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ballpoint Pen</h3>
+                        <p class="product-desc">Smooth writing, everyday essential</p>
+                        <div class="price-row">
+                            <span class="price">$2.49</span>
+                            <button class="add-btn" onclick="addToCart(12)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Rice.png" alt="Rice">
+                    </div>
+                    <div class="product-info">
+                        <h3>Long Grain Rice</h3>
+                        <p class="product-desc">Premium quality, staple food</p>
+                        <div class="price-row">
+                            <span class="price">$6.99</span>
+                            <button class="add-btn" onclick="addToCart(13)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Shampoo.png" alt="Shampoo">
+                    </div>
+                    <div class="product-info">
+                        <h3>Nourishing Shampoo</h3>
+                        <p class="product-desc">Gentle care for healthy hair</p>
+                        <div class="price-row">
+                            <span class="price">$8.49</span>
+                            <button class="add-btn" onclick="addToCart(14)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New: Avocado & Salmon -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Avocado.png" alt="Avocado">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Avocado</h3>
+                        <p class="product-desc">Creamy fruit rich in healthy fat</p>
+                        <div class="price-row">
+                            <span class="price">$3.49</span>
+                            <button class="add-btn" onclick="addToCart(15)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Salmon.png" alt="Salmon">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Salmon Fillet</h3>
+                        <p class="product-desc">High-quality seafood rich in omega-3</p>
+                        <div class="price-row">
+                            <span class="price">$22.99</span>
+                            <button class="add-btn" onclick="addToCart(16)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart" class="cart-section">
+        <div class="container">
+            <h2 class="section-title">Your Shopping Cart</h2>
+            <div class="cart-container">
+                <div class="cart-items" id="cart-items">
+                    <p class="empty-cart">Your cart is empty. Start shopping now!</p>
+                </div>
+                <div class="cart-summary">
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row total-row">
+                        <span>Total Amount:</span>
+                        <span id="total" class="total-price">$0.00</span>
+                    </div>
+                    <div class="cart-buttons">
+                        <button class="btn-clear" onclick="clearCart()">Clear Cart</button>
+                        <button class="btn-checkout" onclick="checkout()">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 FreshMart Grocery Store | For Experimental Use Only</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

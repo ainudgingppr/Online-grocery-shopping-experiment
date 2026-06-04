@@ -1,0 +1,250 @@
+/* 全局背景（现代浅灰） */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f8fa; /* 浅灰Amazon背景 */
+    color: #111;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* 顶部导航 */
+.top-nav {
+    background-color: #232f3e;
+    color: white;
+    padding: 12px 0;
+}
+.top-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.brand-logo h1 {
+    color: #ff9900;
+    margin: 0;
+    font-size: 24px;
+}
+.search-bar {
+    display: flex;
+    width: 55%;
+}
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-size:15px;
+}
+.search-btn {
+    background-color: #ff9900;
+    border: none;
+    padding: 0 16px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+.header-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* 二级导航 */
+.sub-nav {
+    background-color: white;
+    border-bottom: 2px solid #008749;
+    padding: 12px 0;
+}
+.sub-wrap {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.sub-menu {
+    display: flex;
+    gap: 25px;
+    position: relative;
+}
+.sub-menu a {
+    text-decoration: none;
+    color: #222;
+}
+.dropdown-wrap {
+    position: relative;
+}
+.dropdown-panel {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    min-width: 220px;
+    display: none;
+    z-index: 99;
+    border-radius: 6px;
+}
+.dropdown-wrap:hover .dropdown-panel {
+    display: block;
+}
+.drop-item {
+    padding: 10px 16px;
+    cursor: pointer;
+}
+.drop-item:hover {
+    background-color: #f5f5f5;
+}
+
+/* Tab */
+.tab-section {
+    margin: 20px 0;
+}
+.tab-btn {
+    border: none;
+    background: none;
+    font-size: 16px;
+    padding: 8px 14px;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+}
+.tab-btn.active {
+    border-bottom: 3px solid #008749;
+    color: #008749;
+    font-weight: bold;
+}
+.tab-tip {
+    background: #e8f4ff;
+    border: 1px solid #b3d8ff;
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* 商品区 */
+.products-section {
+    margin: 30px 0;
+}
+.cate-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.cate-more {
+    color: #0066cc;
+    text-decoration: none;
+}
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+.product-card {
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    text-align: center;
+}
+.product-image img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+}
+.product-info h3 {
+    font-size: 14px;
+    margin: 8px 0;
+}
+.product-info p {
+    color: #b12704;
+    font-weight: bold;
+    margin:4px 0;
+}
+.add-btn {
+    background-color: #ffd814;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 6px;
+}
+.add-btn:hover {
+    background-color: #f7ca00;
+}
+
+/* 购物车 */
+.cart-section {
+    background: white;
+    padding: 30px 0;
+    margin: 30px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.cart-container {
+    display: flex;
+    gap: 30px;
+}
+.cart-items {
+    flex: 2;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+.item-controls button {
+    margin: 0 4px;
+}
+.cart-summary {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.total-price {
+    color: #b12704;
+    font-weight: bold;
+}
+.btn-clear {
+    background: #f44336;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin: 8px 0;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.btn-checkout {
+    background: #ff9900;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* 访问统计样式 */
+.footer-stats {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #888;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: #f5f7fa;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .login-box {
+            width: 400px;
+            margin: 100px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .login-box h2 {
+            margin-bottom: 20px;
+            color: #222;
+        }
+        .login-box input {
+            width: 100%;
+            padding: 12px;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        .login-box button {
+            width: 100%;
+            padding: 12px;
+            background: #232f3e;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-box button:hover {
+            background: #1a242f;
+        }
+        .admin-content {
+            display: none;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            margin-top: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 14px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        th {
+            background: #232f3e;
+            color: white;
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ff9900;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        .clear-btn {
+            padding: 10px 20px;
+            background: #f44336;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .empty {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="loginPanel" class="login-box">
+        <h2>Admin Login</h2>
+        <input type="password" id="pwd" placeholder="Enter Password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="adminPanel" class="admin-content">
+        <a href="index.html" class="back-btn">← Back to Shop</a>
+        <button class="clear-btn" onclick="clearLogs()">Clear All Records</button>
+        <h1>Visitor Browse Records</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Visit Time</th>
+                    <th>Leave Time</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+            <tbody id="logTable"></tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    // 默认密码：123456
+    const PASSWORD = "123456";
+
+    function login() {
+        let input = document.getElementById("pwd").value;
+        if (input === PASSWORD) {
+            document.getElementById("loginPanel").style.display = "none";
+            document.getElementById("adminPanel").style.display = "block";
+            loadLogs();
+        } else {
+            alert("Wrong Password!");
+        }
+    }
+
+    function loadLogs() {
+        let table = document.getElementById("logTable");
+        let logs = JSON.parse(localStorage.getItem("freshmartVisitLogs")) || [];
+
+        if (logs.length === 0) {
+            table.innerHTML = `<tr><td colspan="4" class="empty">No records yet</td></tr>`;
+            return;
+        }
+
+        logs.forEach((log, i) => {
+            let tr = document.createElement("tr");
+            tr.innerHTML = `
+                <td>${i+1}</td>
+                <td>${log.enter}</td>
+                <td>${log.leave}</td>
+                <td>${log.showTime}</td>
+            `;
+            table.appendChild(tr);
+        });
+    }
+
+    function clearLogs() {
+        if (confirm("Confirm clear all records?")) {
+            localStorage.removeItem("freshmartVisitLogs");
+            location.reload();
+        }
+    }
+</script>
+
+</body>
+</html>
